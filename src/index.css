@@ -1,8 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .bg-hero-pattern {
-    background-image: url('./src/assets/HeroImage.jpg');
+    background-image: url('assets/HeroImage.jpg');
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
