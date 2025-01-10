@@ -5,16 +5,15 @@ import About from './components/About'
 import Services from './components/Services'
 import Contact from './components/Contactus'
 import Footer from './components/Footer'
+import Projects from './components/Projects'
+import { Outlet } from 'react-router-dom'
 
 function Layout() {
   return (
     
     <>
        <Navbar/>
-       <Hero/>
-       <About/>
-       <Services/>
-       <Contact/>
+           <Outlet/>
        <Footer/>
     </>
   )

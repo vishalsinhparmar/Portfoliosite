@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 .bg-hero-pattern {
     background-image: url('./src/assets/HeroImage.jpg');
     background-size: cover;
@@ -8,3 +5,4 @@
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.5); /* Adds a dark overlay for readability */
   }
+  
