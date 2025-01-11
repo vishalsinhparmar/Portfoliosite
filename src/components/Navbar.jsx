@@ -1,20 +1,26 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+  // Close the mobile menu and navigate to the home page
+  const handleLogoClick = () => {
+    setIsOpen(false);
+    navigate("/");
+  };
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center p-5">
         {/* Logo */}
-        <NavLink
-          to="/"
-          className="text-2xl font-extrabold text-gray-800"
-          onClick={() => setIsOpen(false)}
+        <div
+          className="text-2xl font-extrabold text-gray-900 tracking-wide cursor-pointer"
+          onClick={handleLogoClick}
         >
           VISHAISINH
-        </NavLink>
+        </div>
 
         {/* Hamburger Menu for Mobile */}
         <button
@@ -46,69 +52,25 @@ const Navbar = () => {
         </button>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `text-gray-800 font-medium hover:text-green-500 ${
-                isActive ? "text-green-500 border-b-2 border-green-500" : ""
-              }`
-            }
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              `text-gray-800 font-medium hover:text-green-500 ${
-                isActive ? "text-green-500 border-b-2 border-green-500" : ""
-              }`
-            }
-          >
-            About
-          </NavLink>
-          
-          <NavLink
-              to="/Skills"
-              className={({ isActive }) =>
-                `text-gray-800 font-medium hover:text-green-500 ${
-                  isActive ? "text-green-500" : ""
-                }`
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              Skills
-            </NavLink>
-          <NavLink
-            to="/project"
-            className={({ isActive }) =>
-              `text-gray-800 font-medium hover:text-green-500 ${
-                isActive ? "text-green-500 border-b-2 border-green-500" : ""
-              }`
-            }
-          >
-            Projects
-          </NavLink>
-          <NavLink
-            to="/services"
-            className={({ isActive }) =>
-              `text-gray-800 font-medium hover:text-green-500 ${
-                isActive ? "text-green-500 border-b-2 border-green-500" : ""
-              }`
-            }
-          >
-            Services
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              `bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 ${
-                isActive ? "bg-green-600" : ""
-              }`
-            }
-          >
-            Contact
-          </NavLink>
+        <div className="hidden md:flex space-x-8 text-gray-800">
+          {["Home", "About", "Skills", "Projects", "Services", "Contact"].map(
+            (item) => (
+              <NavLink
+                key={item}
+                to={`/${item === "Home" ? "" : item.toLowerCase()}`}
+                className={({ isActive }) =>
+                  `text-lg font-semibold tracking-wide transition-colors ${
+                    isActive
+                      ? "text-green-500 underline underline-offset-4"
+                      : "hover:text-green-500 hover:underline underline-offset-4"
+                  }`
+                }
+                onClick={() => setIsOpen(false)}
+              >
+                {item}
+              </NavLink>
+            )
+          )}
         </div>
       </div>
 
@@ -116,73 +78,24 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-white">
           <div className="flex flex-col items-center space-y-4 py-4">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `text-gray-800 font-medium hover:text-green-500 ${
-                  isActive ? "text-green-500" : ""
-                }`
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                `text-gray-800 font-medium hover:text-green-500 ${
-                  isActive ? "text-green-500" : ""
-                }`
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </NavLink>
-
-            <NavLink
-              to="/Skills"
-              className={({ isActive }) =>
-                `text-gray-800 font-medium hover:text-green-500 ${
-                  isActive ? "text-green-500" : ""
-                }`
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              Skills
-            </NavLink>
-            <NavLink
-              to="/project"
-              className={({ isActive }) =>
-                `text-gray-800 font-medium hover:text-green-500 ${
-                  isActive ? "text-green-500" : ""
-                }`
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              Projects
-            </NavLink>
-            <NavLink
-              to="/services"
-              className={({ isActive }) =>
-                `text-gray-800 font-medium hover:text-green-500 ${
-                  isActive ? "text-green-500" : ""
-                }`
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              Services
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                `bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 ${
-                  isActive ? "bg-green-600" : ""
-                }`
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </NavLink>
+            {["Home", "About", "Skills", "Projects", "Services", "Contact"].map(
+              (item) => (
+                <NavLink
+                  key={item}
+                  to={`/${item === "Home" ? "" : item.toLowerCase()}`}
+                  className={({ isActive }) =>
+                    `text-lg font-semibold tracking-wide transition-colors ${
+                      isActive
+                        ? "text-green-500 underline underline-offset-4"
+                        : "hover:text-green-500 hover:underline underline-offset-4"
+                    }`
+                  }
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item}
+                </NavLink>
+              )
+            )}
           </div>
         </div>
       )}

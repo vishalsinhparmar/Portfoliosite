@@ -1,8 +1,2 @@
-.bg-hero-pattern {
-    background-image: url('./src/assets/HeroImage.jpg');
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.5); /* Adds a dark overlay for readability */
-  }
+
   
