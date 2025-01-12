@@ -11,7 +11,7 @@ const projects = [
     description:
       "A full-stack e-commerce application featuring real-time order tracking, secure payment integration (Razorpay), and an admin dashboard for managing categories, orders, and users.",
     technologies: ["React", "Node.js", "Express", "MongoDB", "JWT", "Razorpay", "Cloudinary", "AJAX"],
-    liveDemo: "https://food-delivery-mern-project-eqy42tvmt-vishalsinhparmars-projects.vercel.app",
+    liveDemo: "https://food-delivery-mern-project-fhjasezrj-vishalsinhparmars-projects.vercel.app",
     github: "https://github.com/vishalsinhparmar/Food_delivery_MERN_project",
     image: fodImage,
   },
