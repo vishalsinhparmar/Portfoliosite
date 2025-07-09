@@ -17,7 +17,7 @@ const About = () => (
             Building Seamless, Scalable, and Secure Web Applications
           </h1>
           <p className="mt-6 text-gray-700 leading-relaxed">
-            I’m a MERN stack developer based in Rajkot, IN, dedicated to crafting robust and scalable 
+            I’m a 2 year experienced MERN stack developer based in Gandhinagar, IN, dedicated to crafting robust and scalable 
             web applications. Proficient in React, Redux, Tailwind CSS, and Material-UI for intuitive 
             frontend development, and skilled in backend technologies like Node.js, Express, and MongoDB. 
             I have a proven track record of implementing CI/CD workflows, integrating payment gateways 

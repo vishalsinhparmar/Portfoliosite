@@ -1,7 +1,7 @@
 import React from "react";
 import { CiLocationOn } from "react-icons/ci";
 import avatar from '../assets/PortFolio.png';
-import resumePDF from '../assets/Vishalsinh_Parmar_Resume_3.pdf';
+import resumePDF from '../assets/VishalsinhParmar_MERN_stack_developer-2Year.pdf';
 import { GoDotFill } from "react-icons/go";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineDownload } from "react-icons/ai";
@@ -43,7 +43,7 @@ const Hero = () => (
         <div className="mt-8 space-y-4">
           <div className="flex items-center text-xl">
             <IoLocationOutline className="text-green-400 text-2xl mr-4" />
-            <span>Rajkot, India</span>
+            <span>Gandhinagar, India</span>
           </div>
           <div className="flex items-center text-xl">
             <GoDotFill className="text-green-400 text-2xl mr-4" />

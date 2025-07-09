@@ -1,10 +1,13 @@
-import React from "react";
+
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import fodImage from "../assets/imageFood.png";
 import blogImage from "../assets/Blog_image.png";
 import muiImage from "../assets/MUI_dashboard.png";
 import sass from "../assets/SassImage.png";
-
+import adminTask from "../assets/taskAdmin.png"
+import todoApp from '../assets/GridlayoutPage.png'
+import cartImage from '../assets/CartSystem.png'
+import eccommerce from '../assets/eccommerce.png'
 const projects = [
   {
     title: "Food Delivery System with Admin Dashboard",
@@ -20,10 +23,58 @@ const projects = [
     description:
       "A blogging platform with secure user authentication using JWT, email verification via Nodemailer, and an interactive comment system for user engagement.",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Nodemailer"],
-    liveDemo: "https://blog-frontend-r6xa17h3t-vishalsinhparmars-projects.vercel.app/",
+    liveDemo: "https://blog-frontend-one-rho.vercel.app/",
     github: "https://github.com/vishalsinhparmar/blog_frontend",
     image: blogImage,
   },
+    {
+    title: "Task Management Dashboard (Fullstack MERN)",
+    description:
+      "A full-featured task manager built as a MERN assessment project with JWT authentication, Redux Toolkit, and a responsive UI using Tailwind. Features task CRUD, filtering, toast alerts, protected routes, and more.",
+    technologies: [
+      "React", "Redux Toolkit", "Node.js", "Express", "MongoDB", "JWT", 
+      "Tailwind CSS", "Axios", "Toastify", "Vite", "Mongoose", "Railway", "Vercel"
+    ],
+    liveDemo: "https://mern-fullstack-assessment.vercel.app",
+    github: "https://github.com/vishalsinhparmar/MERN_fullstack_assessment",
+    image: adminTask,
+  },
+    {
+    title: "CRUD ToDo App with MVC Architecture",
+    description:
+      "A full-stack MERN CRUD application showcasing clean architecture with MVC pattern in the backend. Implements real-time dynamic updates, strong folder structure, and responsive UI. Backend validation is handled with Joi.",
+    technologies: [
+      "React", "Node.js", "Express", "MongoDB", "Mongoose", "MVC", 
+      "Joi", "Tailwind CSS", "Axios", "Vercel", "Railway", "Postman"
+    ],
+    liveDemo: "https://day12-task-nine.vercel.app/",
+    github: "https://github.com/vishalsinhparmar/Day12_task",
+    image: todoApp,
+  },
+    {
+    title: "🛍️ Product Catalog - React Frontend Assessment",
+    description:
+      "A responsive product catalog web application developed for the CloudGenZ Technologies Pvt Ltd frontend assessment. Features a clean UI, routing, responsive layout, API integration with error handling, and product detail navigation.",
+    technologies: [
+      "React", "React Router DOM", "CSS", "Fake Store API", "Vercel"
+    ],
+    liveDemo: "https://react-frontend-assessment-taupe.vercel.app/",
+    github: "https://github.com/vishalsinhparmar/React-Frontend-Assessment",
+    image: eccommerce,
+  },
+    {
+    title: "E-Commerce App with Redux & Authentication",
+    description:
+      "A professional e-commerce frontend app built using React and Redux Toolkit. Features user authentication, category-wise filtering, pagination, and a fully functional shopping cart with checkout functionality. Data powered by DummyJSON API.",
+    technologies: [
+      "React", "Redux Toolkit", "JavaScript", "Tailwind CSS",
+      "Redux Thunk", "JWT", "DummyJSON API", "Vercel"
+    ],
+    liveDemo: "https://interview-task-xi-vert.vercel.app/",
+    github: "https://github.com/vishalsinhparmar/Interview_task",
+    image: cartImage,
+  },
+
   {
     title: "MUI Dashboard",
     description:
@@ -42,6 +93,7 @@ const projects = [
     github: "https://github.com/vishalsinhparmar/UI_SASS_PROJECT",
     image: sass,
   },
+
 ];
 
 const Projects = () => (

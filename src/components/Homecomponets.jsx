@@ -8,9 +8,9 @@ import Skills from "./Skill";
 const Homecomponets = ()=>{
        return (
          <>
-             <Hero/>
-             <About/>
-             <Skills/>
+              <Hero/>
+              <About/>
+              <Skills/>
               <Services/>
               <Projects/>
               <Contact/>
