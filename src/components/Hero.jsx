@@ -1,7 +1,6 @@
-import React from "react";
-import { CiLocationOn } from "react-icons/ci";
+
 import avatar from '../assets/PortFolio.png';
-import resumePDF from '../assets/VishalsinhParmar_MERN_stack_developer-2Year.pdf';
+import resumePDF from '../assets/VishalsinhParmar_MERN_stack-4.pdf';
 import { GoDotFill } from "react-icons/go";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineDownload } from "react-icons/ai";
